@@ -51,6 +51,7 @@ const PageCourse = () => {
     }else{
       setLoading(true)
       setCourseCategory([])
+      setCourseListCategory([])
       CourseService.getPublicCourses()
       .then(response => {
         let { courses } = response.data
