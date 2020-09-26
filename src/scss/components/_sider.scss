@@ -1,0 +1,13 @@
+.main-sider {
+
+  padding-top: $padding-default;
+
+  &__menu {
+    .ant-menu-item, .ant-menu-submenu {
+      background-color: transparent;
+    }
+    .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+      background-color: transparent;
+    }
+  }
+}
