@@ -4,10 +4,12 @@ export const getErrorMessage = err => {
   let errorMessage = "Terjadi kesalahan ..."  
   if(err instanceof Error){
     let { response } = err
-    if(typeof response == 'object'){
-      if(response.hasOwnProperty('data')){
-        let { data: { message } } = response
-        errorMessage = message
+    if(typeof response === 'object'){
+      let { data, statusText } = response
+      if(typeof data !== 'undefined'){
+        errorMessage = data.hasOwnProperty('errors') ? statusText : data.detail
+      }else{
+        errorMessage = statusText
       }
     }else{
       let { message } = err

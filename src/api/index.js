@@ -50,7 +50,7 @@ import axios from 'axios'
     Object.keys(SITE_COOKIES).forEach( async key => {
       await setCookie(SITE_COOKIES[key], null, -1)
     })
-    window.location.replace(MENU.LOGIN + window.location.href)
+    window.location.replace(MENU.LOGIN + window.location.origin)
   }
 //
 // End of Destroy access
@@ -62,7 +62,7 @@ import axios from 'axios'
     urlAuthApi: API_AUTH_URL,
     config: configApi, 
     configAuth: configAuthApi, 
-    defaultParams: { limit: 10 }
+    defaultParams: { index: 0, size: 10 }
   }
 
   export const AuthApi = Auth(params)
