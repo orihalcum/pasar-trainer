@@ -8,7 +8,12 @@ const getPublicCourses = (params) => {
   return CourseApi.getPublicCourses(params)
 }
 
+const getCourseCategory = (params) => {
+  return CourseApi.getCourseCategory(params)
+}
+
 export default {
   getMyCourses,
-  getPublicCourses
+  getPublicCourses,
+  getCourseCategory
 }

@@ -7,7 +7,6 @@ const HeaderNav = () => {
       <div className="color-white" />
       <Menu mode="horizontal" defaultSelectedKeys={['1']}>
         <Menu.Item key="1">Training Provider</Menu.Item>
-        <Menu.Item key="2">Admin</Menu.Item>
       </Menu>
     </div>
   );
